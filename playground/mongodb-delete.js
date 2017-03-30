@@ -6,13 +6,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db)=>{
   }
   console.log('connected to MongoDB sever');
 
-  // db.collection('Users').deleteMany({ name: 'Rohit' }).then((commandResult)=>{
-  //   console.log(commandResult.result);
-  // });
-
-  db.collection('Users').findOneAndDelete({_id: new ObjectID("58dcaa6b1a0db966db49561f")}).then((res)=>{
-    console.log(res);
+  db.collection('Users').deleteMany({ name: 'Rohit' }).then((commandResult)=>{
+    console.log(commandResult.result);
   });
+
+  // db.collection('Users').findOneAndDelete({_id: new ObjectID("58dcaa6b1a0db966db49561f")}).then((res)=>{
+  //   console.log(res);
+  // });
 
   //deleteMany
   // db.collection('Todos').deleteMany({ text: 'Eat lunch'}).then((result)=>{
